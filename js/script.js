@@ -141,11 +141,11 @@ const listenerViewButtons = () => {
 } // Add eventListener to buttons which show number of products in wrapper 
 
 const timerSetup = () => {
-    $('.timer').countdown('2019/03/05 20:30:00')
+    $('.timer').countdown('2019/03/07 23:59:59')
     .on('update.countdown', function(event) {
     var format = '%H : %M : %S';
     if(event.offset.totalDays > 0) {
-        format = '%-d : %!d ' + format;
+        format = '%-d : ' + format;
     }
     if(event.offset.weeks > 0) {
         format = '%-w week%!w ' + format;
