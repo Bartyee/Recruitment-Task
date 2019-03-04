@@ -1,5 +1,5 @@
 let furniture = []; //Global array for items from api. Globally because in the future we can manipulate this variable between function etc.
-const apiURL = "http://localhost:3030"; // Url for API
+const apiURL = "https://bartyee.github.io/Recruitment-Task/js/example.json"; // Url for API
 
 //////////////////////////////// DOM elements
 
