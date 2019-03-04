@@ -1,0 +1,409 @@
+$redColor: #ff0000;
+$grayColor: #ebebeb;
+
+*{
+    -webkit-transform: translateZ(0); //for chrome, fix for my localhost
+}
+
+@font-face{
+    font-family: GothamBook;
+    src: url('../assets/fonts/GothamBook.ttf');
+}
+//VARIABLES
+
+
+
+
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+}
+
+
+
+
+#container{
+    width: 90%;
+    margin: 0 auto;
+
+    
+    
+
+    .advertisement{
+        margin-top: 120px;
+        position: relative;
+
+        .advertisement__img{
+            width: 100%;
+        }
+
+        
+
+        .timer{
+            position: absolute;
+            color: #ffffff;
+            right: 5%;
+            top: 20%;
+            border: solid #ffffff 2px;
+            width: 25%;
+            height: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: GothamBook;
+            font-weight: bold;
+            font-size: 40px;
+            
+
+            &:before{
+                content: 'DO KOŃCA POZOSTAŁO';
+                margin-bottom: 5px;
+                font-size: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: normal;
+            }
+
+            &:after{
+                content: 'DNI  GODZ  MIN  SEK';
+                font-size: 15px;
+                display: flex;
+                margin-top: 5px;
+                color: #000000;
+                font-weight: bold;
+                letter-spacing: 8px;
+            }
+
+            
+        }
+
+        .endOfPromo{
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            font-size: 12px;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            display: none;
+            
+
+            p{
+                margin: 0;
+            }
+        }
+
+        
+    }
+
+    .promotionInformations{
+        display: flex;
+        justify-content: space-between;
+        
+
+        .promotionInformations__time{
+            display: flex;
+            align-items: center;
+            
+
+            .promotionInformations__time__productsPerHour{
+                font-family: GothamBook;
+            }
+            
+            &:before{
+                content: url('../img/timer.png');
+                margin-right: 15px;
+            }
+
+            
+        }
+
+        .promotionInformations__additionalInfo{
+            display: flex;
+            align-items: center;
+            font-family: GothamBook;
+            font-size: 14px;
+            
+            &:before{
+                content: url('../img/interjection.png');
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .productViewButtons{
+        width: 80px;
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        .productViewButtons__button{
+            border-radius: 30px;
+            padding: 2px 6px;
+            border: solid 0.5px darken($grayColor, $amount: 10);
+            background-color: #ebebeb;
+            transition: .2s;
+            outline: none;
+            
+            &:hover{
+                border: solid 0.5px darken($grayColor, $amount: 30);
+                cursor: pointer;
+                cursor: hand;
+            }
+
+        }
+
+        .productViewButtons__button--clicked{
+            border: solid 0.5px darken($grayColor, $amount: 10);
+            background-color: darken($grayColor, $amount: 15);
+            transition: .2s;
+            
+            &:hover{
+                border: solid 0.5px darken($grayColor, $amount: 30);
+                cursor: pointer;
+                cursor: hand;
+            }
+        }
+
+        
+    }
+
+    .productsWrapper{
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+
+        .product{
+            height: 460px;
+            margin-top: 25px;
+            border: solid $grayColor 1px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: .5s;
+
+            
+
+            &:hover{
+                border: solid darken($grayColor, 20) 1px;
+                cursor: pointer;
+                cursor: hand;
+                transform: scale(1.02);
+            }
+            
+            p{
+                margin: 0;
+            }
+
+            .product__amount_priceSave{
+                display: flex;
+                width: 100%;
+                
+
+                .product__amount{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    font-family: GothamBook;
+                    font-size: 13px;
+                    transition: 0.5s;
+                    &:before{
+                        content: url('../img/basket.png');
+                        margin-right: 5px;
+                    }
+
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+
+                .product__priceSave{
+                    color: $redColor;
+                    width: 50%;
+                    text-align: center;
+                    font-family: GothamBook;
+                    padding: 5px 0;
+                    font-size: 15px;
+                    border: solid $redColor 2px;
+
+                    span{
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .product__picture{
+                text-align: center;
+
+                .product__picture__img{
+                    width: 100%;
+                }
+            }
+
+            .product__mainInformation{
+                display: flex;
+                width: 90%;
+                margin: 0 auto;
+                flex-direction: column;
+                justify-content: center;
+
+                .product__mainInformation__price{
+                    display: flex;
+                    font-family: GothamBook;
+                    font-weight: bold;
+                    align-items: center;
+
+                    .price__afterPromo{
+                        margin-right: 25px;
+                        color: $redColor;
+                    }
+
+                    .price__beforePromo{
+                        text-decoration: line-through;
+                        font-size: 13px;
+                    }
+                }
+
+                .product__mainInformation__name{
+                    color: #000000;
+                    font-family: GothamBook;
+                    font-weight: bold;
+                    font-size: 14px;
+                    margin-top: 15px;
+                }
+
+                .product__mainInformation__producer{
+                    color: darken($grayColor, $amount: 30);
+                    font-size: 13px;
+                    margin-top: 5px;
+                    margin-bottom: 30px;
+                    font-family: GothamBook;
+                }
+                
+            }
+
+        }
+
+
+    }
+    
+}
+
+@media only screen and(max-width: 768px){
+
+    .endOfPromo{
+        font-size: 8px !important;
+    }
+
+    .promotionInformations{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: solid $grayColor 0.5px;
+        padding: 15px;
+    }
+    
+    .productsWrapper{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+
+        
+
+        .product{
+            .product__amount_priceSave{
+                justify-content: center;
+                flex-wrap: wrap;
+                
+
+                .product__amount{
+                    width: 100% !important;
+                    margin-top: 20px;
+                }
+
+                .product__priceSave{
+                    border: none !important;
+                    width: 100% !important;
+                    text-align: center !important;
+                }
+            }
+
+            .product__mainInformation{
+                
+                .product__mainInformation__price{
+                    display: flex;
+                    justify-content: space-around;
+
+                    .price{
+                        font-size: 12px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(min-width: 768px){
+    .productsWrapper{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 20px;
+
+        .product{
+            .product__amount_priceSave{
+                justify-content: center;
+                align-items: center;
+
+                .product__amount{
+                    width: 50% !important;
+                    
+                }
+
+                .product__priceSave{
+                    
+                    width: 50% !important;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(min-width: 1440px){
+    .productsWrapper{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 40px;
+
+        .product{
+            .product__amount_priceSave{
+                align-items: center;
+                
+
+                .product__amount{
+                    width: 50% !important;
+                    
+                }
+
+                .product__priceSave{
+                    
+                    width: 50% !important;
+                    text-align: center !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 1280px) {
+    .timer{
+        display: none !important;
+    }
+
+    .endOfPromo{
+        display: block !important;
+    }
+}
