@@ -87,7 +87,7 @@ body, html {
       #container .promotionInformations .promotionInformations__time .promotionInformations__time__productsPerHour {
         font-family: GothamBook; }
       #container .promotionInformations .promotionInformations__time:before {
-        content: url("../img/timer.png");
+        content: url("../assets/img/timer.png");
         margin-right: 15px; }
     #container .promotionInformations .promotionInformations__additionalInfo {
       display: -webkit-box;
@@ -99,7 +99,7 @@ body, html {
       font-family: GothamBook;
       font-size: 14px; }
       #container .promotionInformations .promotionInformations__additionalInfo:before {
-        content: url("../img/interjection.png");
+        content: url("../assets/img/interjection.png");
         margin-right: 15px; }
   #container .productViewButtons {
     width: 80px;
@@ -188,7 +188,7 @@ body, html {
           -o-transition: 0.5s;
           transition: 0.5s; }
           #container .productsWrapper .product .product__amount_priceSave .product__amount:before {
-            content: url("../img/basket.png");
+            content: url("../assets/img/basket.png");
             margin-right: 5px; }
           #container .productsWrapper .product .product__amount_priceSave .product__amount:hover {
             -webkit-transform: scale(1.2);

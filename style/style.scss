@@ -113,7 +113,7 @@ body,html{
             }
             
             &:before{
-                content: url('../img/timer.png');
+                content: url('../assets/img/timer.png');
                 margin-right: 15px;
             }
 
@@ -127,7 +127,7 @@ body,html{
             font-size: 14px;
             
             &:before{
-                content: url('../img/interjection.png');
+                content: url('../assets/img/interjection.png');
                 margin-right: 15px;
             }
         }
@@ -210,7 +210,7 @@ body,html{
                     font-size: 13px;
                     transition: 0.5s;
                     &:before{
-                        content: url('../img/basket.png');
+                        content: url('../assets/img/basket.png');
                         margin-right: 5px;
                     }
 
